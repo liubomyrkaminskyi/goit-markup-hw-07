@@ -21,6 +21,66 @@
 
   --header-idx: 10;
   --modal-idx: 100;
+
+  --indent-hor: 24px;
+  --indent-vert: 72px;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.header-page {
+  line-height: calc(16 / 14);
+  width: 100%;
+  border-bottom: 1px solid var(--secondary-fon-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.section {
+  padding: 96px 0;
+  /* padding: 120px 0; */
+}
+
+@media only screen and (min-width: 1200px) {
+  .section {
+    padding: 120px 0;
+  }
+}
+
+.container {
+  /* Basic styles */
+  min-width: 320px;
+  max-width: 396px;
+  padding: 0 16px;
+  margin: 0 auto;
+  /* max-width: 1158px;
+ 
+  */
+}
+
+/* Tablet screen */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* Desktop screen */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
 }
 
 h1,
@@ -48,20 +108,7 @@ body {
   background-color: var(--main-bg-cl);
 }
 
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 /* Header */
-.header-page {
-  line-height: calc(16 / 14);
-  width: 100%;
-  border-bottom: 1px solid var(--secondary-fon-color);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 1px 6px rgba(46, 47, 66, 0.08);
-}
 
 .site-nav {
   display: flex;
@@ -144,8 +191,6 @@ body {
 }
 
 .team {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background-color: var(--secondary-bg-cl);
 }
 
@@ -265,12 +310,6 @@ body {
   color: var(--main-bg-cl);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 /* Main content */
@@ -428,7 +467,27 @@ body {
 
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+  .team-list {
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .team-list {
+    gap: 24px;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .team-item {
@@ -496,19 +555,6 @@ body {
 
 .adr-list .item:not(:last-child) {
   margin-right: 40px;
-}
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
 
 .features-box {
