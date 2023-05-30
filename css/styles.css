@@ -144,9 +144,9 @@ body {
   }
 }
 
-@media only screen and (1158px) {
+@media only screen and (min-width: 1158px) {
   .header-nav {
-    margin-right: auto;
+    margin-right: 332px;
     align-items: baseline;
   }
 }
@@ -211,7 +211,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1158pxpx) {
+@media only screen and (min-width: 1158px) {
   .logo {
     margin-right: 76px;
   }
@@ -513,7 +513,14 @@ body {
   text-align: center;
   color: var(--subtitle-cl);
 }
-@media only screen and (min-width: 1158pxx) {
+
+@media only screen and (min-width: 768px) {
+  .benefits-title {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
   .benefits-title {
     font-weight: 500;
     font-size: 20px;
@@ -822,10 +829,6 @@ body {
   background-color: var(--main-header-cl);
 }
 
-.adr-list .item:not(:last-child) {
-  margin-right: 40px;
-}
-
 .features-box {
   display: none;
   align-items: center;
@@ -890,12 +893,20 @@ body {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 552px;
+  }
+}
+
 @media only screen and (min-width: 1158px) {
   .footer-container {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 1128px;
+    width: 1158px;
 
     align-items: baseline;
   }
@@ -1402,7 +1413,12 @@ body {
     font-weight: 600;
     font-size: 26px;
     line-height: 1.2;
+    color: var(--logo-part-cl);
   }
+}
+
+.mobile-link.tel {
+  color: var(--logo-part-cl);
 }
 
 .mobile-link.small {
@@ -1421,13 +1437,21 @@ body {
 .footer-tablet {
   margin-bottom: 72px;
 }
+@media only screen and (max-width: 360px) {
+  .mobile-social-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 328px;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .footer-tablet {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 552px;
   }
 }
 
@@ -1443,11 +1467,6 @@ body {
 .subscription-form {
   margin-left: auto;
   margin-right: auto;
-}
-@media only screen and (min-width: 768px) {
-  .subscription-form {
-    width: 552px;
-  }
 }
 
 @media only screen and (min-width: 1158px) {
